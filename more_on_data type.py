@@ -1,12 +1,12 @@
 def remove_vowels(string):
-    vowels = "aeiouAEIOU"
-    # Use list comprehension to create a new string with vowels removed
-    string_without_vowels = ''.join([char for char in string if char not in vowels])
-    return string_without_vowels
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    result = ""
+    for char in string:
+        if char not in vowels:
+            result += char
+    return result
 
-# Accept input from the user
-input_string = input("Enter a string: ")
-
-# Call the remove_vowels function and display the result
-result = remove_vowels(input_string)
-print("String after removing vowels:", result)
+# Example usage
+input_string = "Hello, World!"
+output_string = remove_vowels(input_string)
+print(output_string)  
